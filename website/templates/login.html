@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+
+{%block title%}Dabble | Login{%endblock%}
+{%block content%}
+<div class="position-absolute top-50 start-50 translate-middle" >
+    <div class="shadow p-3 mb-5 bg-white rounded">
+      <form method="post">
+        <h2 style="text-align: center;">Log in to Dabble</h2>
+        <p class="text-danger" style="text-align: center;">{{error_message}}</p>
+        <p class="error-message">{{error_message}}</p>
+        
+        
+  <input type="text" class="form-control" placeholder="Enter username..." name="username" style="width: 17rem; margin: 2px" required>
+  
+
+        
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin: 5px">Log in</button>
+
+        </form>
+    </div>
+    
+</div>
+{%endblock%}

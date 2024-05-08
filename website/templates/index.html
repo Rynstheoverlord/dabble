@@ -1,1 +1,45 @@
+{%extends "base.html"%}
 
+{%block title%}Dabble{%endblock%}
+
+{%block content%}
+<style>
+    .hero{
+      background-image: url("https://images.pexels.com/photos/3314294/pexels-photo-3314294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+      text-align: center;
+      color: #fff;
+      background-size: cover;
+      padding: 100px 0;
+    }
+  .card{
+    display: inline-block;
+  }
+</style>
+<div class="hero">
+    <h1>Welcome to Dabble!</h1>
+    <p style="color: gray;">Connect. Discuss. Imagine. Dive into a verse of endless possibilities.</p>
+    <div style="display: flex; justify-content: center;">
+<a href="/login" class="btn btn-primary">Get Started</a>
+    </div>
+</div>
+<div class="details-container">
+   <div class="card" style="width: 22rem;">
+  <img src="https://media.gettyimages.com/id/600578849/photo/pixelated-woman.jpg?s=612x612&w=0&k=20&c=KkS4Xocnx8euNOYJZDncIdGHGMkDzzptrEEkUJYE7RA=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Incognito</h5>
+    <p class="card-text">Dabble ensures users retain an anonymous status as there is no login required in order to get started, just a username which can be discarded after use.</p>
+    <a href="#" class="btn btn-primary">Enter</a>
+  </div>
+   </div>
+
+  <div class="card" style="width: 22rem;">
+  <img src="https://media.istockphoto.com/id/491838182/photo/privacy-settings-on-laptop-screen.jpg?s=612x612&w=0&k=20&c=3sA0QOgRsE4XTi8OIt5_NUaDssBaoPG1IRG0XdbLWfU=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Privacy</h5>
+    <p class="card-text">Offering robust privacy controls and encryption can make users feel secure while using the platform.</p>
+    <a href="#" class="btn btn-primary">Enter</a>
+  </div>
+  </div>
+</div>
+
+{%endblock%}
