@@ -23,8 +23,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="post">
-          
+        <form method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+  <label for="formFile" class="form-label">Enter a picture (optional)</label>
+  <input class="form-control" type="file" id="formFile" name="image">
+          </div>
 <div class="mb-3">
   <label for="content" class="form-label">Content</label>
   <textarea class="form-control" id="content" rows="3" name="content"></textarea>
@@ -58,6 +61,10 @@
       
       
     </div>
+    {%if post|length > 3%}
+      <img src="{{post[3]}}" class="img-fluid" alt="...">
+      {%endif%}
+    
     <p class="card-text">{{post[1]}}</p>
     <div class="d-flex justify-content-between align-items-center">
 
