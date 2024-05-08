@@ -30,6 +30,14 @@ def feed():
   else:
     return redirect(url_for("auth.logout"))
 
+@views.route("/rooms")
+def rooms():
+  if session["username"] is not None: 
+    return render_template("rooms.html")
+    
+  else:
+    return redirect(url_for("auth.logout"))
+
 
 @views.route("/about")
 def about():
