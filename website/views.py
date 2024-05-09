@@ -66,7 +66,7 @@ def feed():
     
     return redirect(url_for("views.feed"))
   if session["username"] is not None: 
-    return render_template("feed.html", posts=POSTS[::-1])
+    return render_template("feed.html", posts_1=POSTS[::-1], posts_2 = POSTS)
     
   else:
     return redirect(url_for("auth.logout"))
