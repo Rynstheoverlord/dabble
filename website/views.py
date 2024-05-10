@@ -29,6 +29,8 @@ def home():
 
 @views.route("/feed", methods=["GET","POST"])
 def feed():
+  if "username" not in session:
+    session["username"] = None
   path_ = ""
   image_ = False
   if request.method == 'POST':
