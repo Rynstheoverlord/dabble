@@ -75,6 +75,8 @@ def feed():
 
 @views.route("/rooms")
 def rooms():
+  if "username" not in session:
+    session["username"] = None
   if session["username"] is not None: 
     return render_template("rooms.html")
     
@@ -84,6 +86,8 @@ def rooms():
 
 @views.route("/about")
 def about():
+  if "username" not in session:
+    session["username"] = None 
   if session["username"] is not None: 
     return render_template("about.html")
     
